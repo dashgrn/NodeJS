@@ -1,0 +1,2 @@
+text from node.js
+this line was appended
