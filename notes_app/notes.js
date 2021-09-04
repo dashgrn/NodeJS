@@ -18,9 +18,9 @@ const addNote = function (noteTitle, noteBody) {
             noteBody: noteBody
         })
         saveNotes(notes);
-        console.log('a new note has been added');
+        console.log(chalk.green.inverse('a new note has been added'));
     } else {
-        console.log('Note title its already used');
+        console.log(chalk.red.inverse('Note title its already used'));
     }
 }
 
