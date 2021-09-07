@@ -6,6 +6,7 @@ const notes = require('./notes.js');
 yargs.version('1.0.2');
 
 // defining arguments for managin notes: add, remove, read, list
+
 //creating add cmd
 yargs.command({
     command: 'add',
