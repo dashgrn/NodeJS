@@ -1,25 +1,14 @@
 const fs = require('fs');
 
+const dataBuffer = fs.readFileSync('1-json.json') //reading json
+const dataJSON = dataBuffer.toString() //converting buffer to string
+let data = JSON.parse(dataJSON) //converting to obj
 
-// // step 1 load the data
-// const dataBuffer = fs.readFileSync('1-json.json');
+data.name = 'Jose'
+data.age = 32
 
-// // step 2: the data is binary, so we have to convert it to string
-// const dataJSON = dataBuffer.toString();
+let newData = JSON.stringify(data)
 
-// // step 3: parsing the string to JSON object
-// const data = JSON.parse(dataJSON);
+fs.writeFileSync('1-json.json', newData)
 
-// console.log(data.title);
-
-const dataBuffer = fs.readFileSync('1-json.json');
-const dataJSON = dataBuffer.toString();
-const user = JSON.parse(dataJSON);
-
-user.name= 'Jose';
-user.age = 32;
-user.planet = 'Pluto'
-
-const usertoString = JSON.stringify(user);
-fs.writeFileSync('1-json.json', usertoString);
-console.log(usertoString);
+console.log('data from json', newData)
