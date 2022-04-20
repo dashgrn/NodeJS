@@ -17,14 +17,7 @@ const tasks = {
         completed: false
     }],
     getTasksToDo() {
-        let incompleteTask = this.tasks.filter((task) =>  task.completed === false);
-        
-        if (incompleteTask.length > 0) {
-            return incompleteTask
-        } else {
-            console.log('all task are completed');
-        }
-
+        return this.tasks.filter(task => task.completed === false)
     }
 }
 
