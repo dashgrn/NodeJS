@@ -4,17 +4,17 @@ const forecast = require('./utils/forecast')
 const locationInput = process.argv[2]
 
 locationInput ?
-    geocode(locationInput, (err, data) => {
+    geocode(locationInput, (err, {latitude, longitude, location} = {}) => {
         if (err) {
             return console.log('error:', err)
         }
 
-        forecast(data.latitude, data.longitude, (err, forecastData) => {
+        forecast(latitude, longitude, (err, forecastData) => {
             if (err) {
                 return console.log('error', err)
             }
 
-            console.log(data.location)
+            console.log(location)
             console.log(forecastData)
         })
     })
