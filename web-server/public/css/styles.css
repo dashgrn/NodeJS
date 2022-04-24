@@ -1,8 +1,41 @@
-h1 {
-    color: rgb(51, 57, 133);
+body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #cloud{
     width: 200px;
     height: auto;
+    margin: 20px;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 46px;
+}
+
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+footer {
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    color: #888888;
 }
